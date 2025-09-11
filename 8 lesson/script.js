@@ -27,7 +27,6 @@ num = 60;
 // do while
 // Выполнится хотя бы один раз
 
-
 do {
     console.log(num);
     num++;
@@ -36,7 +35,6 @@ do {
 // for
 // Выполнится хотя бы один раз
 // Пример с for
-
 
 for (let i = 1; i < 8; i++) {
     console.log(i);
@@ -52,4 +50,48 @@ for (let i = 0; i < array.length; i++) {
 
     const element = array[i];
     console.log(element);
+}
+
+// Циклы в цикле и метки
+
+first: for (let i = 0; i < 3; i++) {
+    console.log(`First level: ${i}`);
+    second: for (let j = 0; j < 3; j++) {
+        console.log(`Second level: ${j}`);
+    }
+}
+
+// Пирамидка
+
+/* let star = '*';
+
+for (let i = 0; i <= 6; i++) {
+    console.log(star);
+    star = star + '*';
+} */
+
+let result = "";
+const length = 7;
+
+for (let i = 1; i < length; i++) {
+    for (let j = 0; j < i; j++) {
+        result += "*";
+    }
+
+    result += "\n";
+}
+
+console.log(result);
+
+first: for (let i = 0; i < 3; i++) {
+    console.log(`First level: ${i}`);
+    second: for (let j = 0; j < 3; j++) {
+        console.log(`Second level: ${j}`);
+        third: for (let k = 0; k < 3; k++) {
+            if (k === 2) {
+                continue first;
+            }
+            console.log(`Third level: ${k}`);
+        }
+    }
 }
