@@ -1,0 +1,1 @@
+console.log("Testing defer script execution");

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lesson 27 Async, defer, динамические скрипты</title>
+</head>
+
+<body>
+	<script defer src="script.js"></script> <!-- Скрипт будет выполнен после загрузки HTML -->
+	<script defer src="test.js"></script> <!-- Скрипт будет выполнен после загрузки HTML -->
+
+
+	<p>Hello world!</p>
+	<p>Second message</p>
+
+	<script async src="script.js"></script> <!-- Скрипт будет выполнен сразу после загрузки, не дожидаясь HTML -->
+	<script async src="test.js"></script>	<!-- Скрипт будет выполнен сразу после загрузки, не дожидаясь HTML -->
+</body>
+
+</html>
